@@ -26,10 +26,6 @@ int main(void)
 		{
 			printf("%s ", fizzbuzz);
 		}
-		else if (count == 1)
-		{
-			printf("%d ", count);
-		}
 		else
 		{
 			printf("%d ", count);
