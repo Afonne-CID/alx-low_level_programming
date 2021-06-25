@@ -1,13 +1,13 @@
 #include "holberton.h"
 
 /**
- * print_line - Entry point
+ * print_diagonal - Entry point
  *
  * @n: paramater to be passed to function
  *
  * Return: Always 0
  */
-void print_line(int n)
+void print_diagonal(int n)
 {
 	int count;
 
