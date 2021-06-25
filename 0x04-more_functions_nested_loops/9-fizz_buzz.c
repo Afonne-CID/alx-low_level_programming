@@ -1,28 +1,42 @@
 #include <stdio.h>
-#include "holberton.h"
 
 /**
  * main - Entry point
- * 
+ *
  * Return: Always 0
  */
 int main(void)
 {
-  char fizzbuzz;
-  char mult3;
-  char mult5;
-  int count;
+	char fizzbuzz[] = "FizzBuzz";
+	char mult3[] = "Fizz";
+	char mult5[] = "Buzx";
+	int count;
 
-  fizzbuzz = "FizzBuzz";
-  mult3 = "Fizz";
-  mult5 = "Buzx";
- 
-  for (count = 1; count <= 100; count++)
-    {
-      printf("%d ", count);
-	 }
-  
-  putchar('\n');
-  
-  return (0);
+	for (count = 1; count <= 100; count++)
+	{
+		if (count % 3 == 0 && count % 5 != 0)
+		{
+			printf("%s ", mult3);
+		}
+		else if (count % 5 == 0 && count % 3 != 0)
+		{
+			printf("%s ", mult5);
+		}
+		else if (count % 3 == 0 && count % 5 == 0)
+		{
+			printf("%s ", fizzbuzz);
+		}
+		else if (count == 1)
+		{
+			printf("%d ", count);
+		}
+		else
+		{
+			printf("%d ", count);
+		}
+	}
+
+	putchar('\n');
+
+	return (0);
 }
