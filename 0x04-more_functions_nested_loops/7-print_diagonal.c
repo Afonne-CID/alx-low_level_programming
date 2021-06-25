@@ -4,18 +4,14 @@
  * print_line - Entry point
  *
  * @n: paramater to be passed to function
- * 
+ *
  * Return: Always 0
  */
 void print_line(int n)
 {
 	int count;
 
-	if (n <= 0)
-	{
-		_putchar('\n');
-	}
-	else
+	if (n > 0)
 	{
 		if (n != 1)
 		{
