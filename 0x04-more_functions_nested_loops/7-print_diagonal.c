@@ -9,11 +9,11 @@
  */
 void print_line(int n)
 {
-	int count, i, u;
+	int count;
 
 	if (n > 0)
 	{
-		for (i = 1; i < n; i++)
+		for (count = 1; count < n; count++)
 		{
 			_putchar(28);
 		}
