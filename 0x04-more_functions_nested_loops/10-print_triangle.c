@@ -1,11 +1,8 @@
 #include "holberton.h"
 
 /**
- * print_trianglee - Entry point
- *
- * @size: paramater to be passed to function
- *
- * Return: Always 0
+ * print_triangle - prints a triangle, followed by a new line
+ * @size: size of the triangle
  */
 void print_triangle(int size)
 {
@@ -15,20 +12,21 @@ void print_triangle(int size)
 	}
 	else
 	{
-		int angle;
-		int i;
-
-		angle -= size;
-
-		for (i = 1; i <= angle; i++)
+		int h, g;
+		for (h = 0; h < size; h++)
 		{
-			int count;
-
-			for (count = 1; count <= size; count++)
+			for (g = size - 1; g >= 0; g--)
 			{
-				_putchar(35);
+				if (g <= h)
+				{
+					_putchar('#');
+				}
+				else
+				{
+					_putchar(' ');
+				}
 			}
-				_putchar('\n');
+			_putchar('\n');
 		}
 	}
 }
