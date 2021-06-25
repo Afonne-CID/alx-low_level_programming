@@ -1,42 +1,30 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Return: Always 0
+ * main -  prints the numbers from 1 to 100
+ * Return: always 0
  */
+
 int main(void)
 {
-	char fizzbuzz[] = "FizzBuzz";
-	char mult3[] = "Fizz";
-	char mult5[] = "Buzz";
-	int count;
+	int h;
+	char fizz[] = "Fizz";
+	char buzz[] = "Buzz";
+	char fibu[] = "FizzBuzz";
 
-	for (count = 1; count <= 100; count++)
+	for (h = 1; h <= 100; h++)
 	{
-		if (count % 3 == 0 && count % 5 != 0)
-		{
-			printf(" %s", mult3);
-		}
-		else if (count % 5 == 0 && count % 3 != 0)
-		{
-			printf(" %s", mult5);
-		}
-		else if (count % 3 == 0 && count % 5 == 0)
-		{
-			printf(" %s", fizzbuzz);
-		}
-		else if (count == 1)
-		{
-			printf(" %d", count);
-		}
+		if (h % 3 == 0 && h % 5 != 0)
+			printf(" %s", fizz);
+		else if (h % 5 == 0 && h % 3 != 0)
+			printf(" %s", buzz);
+		else if (h % 3 == 0 && h % 5 == 0)
+			printf(" %s", fibu);
+		else if (h == 1)
+			printf("%d", h);
 		else
-		{
-			printf(" %d", count);
-		}
+			printf(" %d", h);
 	}
-
-	putchar('\n');
-
+	printf("\n");
 	return (0);
 }
