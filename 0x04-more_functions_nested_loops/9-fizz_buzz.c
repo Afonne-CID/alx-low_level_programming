@@ -16,23 +16,23 @@ int main(void)
 	{
 		if (count % 3 == 0 && count % 5 != 0)
 		{
-			printf("%s ", mult3);
+			printf(" %s", mult3);
 		}
 		else if (count % 5 == 0 && count % 3 != 0)
 		{
-			printf("%s ", mult5);
+			printf(" %s", mult5);
 		}
 		else if (count % 3 == 0 && count % 5 == 0)
 		{
-			printf("%s ", fizzbuzz);
+			printf(" %s", fizzbuzz);
 		}
 		else if (count == 1)
 		{
-			printf("%d ", count);
+			printf(" %d", count);
 		}
 		else
 		{
-			printf("%d ", count);
+			printf(" %d", count);
 		}
 	}
 
