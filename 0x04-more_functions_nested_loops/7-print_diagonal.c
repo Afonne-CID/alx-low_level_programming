@@ -9,28 +9,15 @@
  */
 void print_line(int n)
 {
-	int count;
+	int count, i, u;
 
 	if (n > 0)
 	{
-		if (n != 1)
+		for (i = 1; i < n; i++)
 		{
-			int diag;
-			int i;
-
-			diag = n - 1;
-
-			for (i = 1; i <= diag; i++)
-			{
-				_putchar(28);
-			}
-
-			_putchar(92);
+			_putchar(28);
 		}
-		else
-		{
-			_putchar(92);
-		}
+		_putchar(92);
 	}
 
 	_putchar('\n');
