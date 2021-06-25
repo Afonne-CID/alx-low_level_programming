@@ -44,4 +44,3 @@ void print_remaining_days(int month, int day, int year)
 		}
 	}
 }
-© 2021 GitHub, Inc.
