@@ -9,6 +9,8 @@ void more_numbers(void)
 {
 	int num;
 	int count;
+	int twodigits;
+	int tmp;
 
 	for (count = 0; count < 10; count++)
 	{
@@ -16,9 +18,13 @@ void more_numbers(void)
 		{
 			if (num >= 10)
 			{
-				_putchar((num / 10) + 48);
+				for (twodigits = 0; twodigits < 2; twodigits++)
+				{
+					tmp = (twodigits == 0) ? num / 10 : num % 10;
+					_putchar(tmp + '0');
+				}
 			}
-			if (num >= 0)
+			else
 			{
 				_putchar(num % 10 + '0');
 			}
