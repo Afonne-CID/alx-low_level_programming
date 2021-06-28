@@ -23,10 +23,10 @@ void print_rev(char *s)
 	firstC = 0;
 	count = 0;
 
-	int tmp = 0;
-
 	while (count < i)
 	{
+		int tmp = 0;
+
 		tmp = s[i];
 		s[i] = s[count];
 		s[firstC] = s[i];
