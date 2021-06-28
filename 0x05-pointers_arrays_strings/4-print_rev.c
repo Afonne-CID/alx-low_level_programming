@@ -10,7 +10,7 @@
  */
 void print_rev(char *s)
 {
-	int length;
+	int tmp, length;
 	int i;
 	int count, firstC;
 
