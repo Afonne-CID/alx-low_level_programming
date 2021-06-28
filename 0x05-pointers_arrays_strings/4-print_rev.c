@@ -10,7 +10,7 @@
  */
 void print_rev(char *s)
 {
-	int tmp, length;
+	int length;
 	int i;
 	int count, firstC;
 
@@ -22,6 +22,7 @@ void print_rev(char *s)
 
 	firstC = 0;
 	count = 0;
+	tmp = 0;
 
 	while (count < i)
 	{
