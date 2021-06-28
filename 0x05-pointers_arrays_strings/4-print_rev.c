@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * print_rev - Function prints any parse string to it in reverse order
@@ -9,14 +10,28 @@
  */
 void print_rev(char *s)
 {
-	int i;
 	int length;
-
-	length = _strlen(s);
-
-	for (i = length; i <= s[0]; i--)
+	int i;
+	int tmp;
+	int firstC;
+	int count;
+	
+	for (length = 0; *(s + length) != '\0'; length++)
 	{
-		_putchar(s[i]);
-	}	
-	_putchar('\n');
+		i++;
+	}
+	i -= 1;
+
+	tmp = 0;
+	firstC = 0;
+	count = 0;
+
+	while (count < i)
+	{
+		tmp = s[i];
+		s[i] = s[count];
+		s(firstC) = s[i];
+		i--;
+		count++;
+	}
 }
