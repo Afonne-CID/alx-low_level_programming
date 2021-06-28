@@ -12,7 +12,6 @@ void print_rev(char *s)
 {
 	int length;
 	int i;
-	int tmp;
 	int firstC;
 	int count;
 	
@@ -22,7 +21,6 @@ void print_rev(char *s)
 	}
 	i -= 1;
 
-	tmp = 0;
 	firstC = 0;
 	count = 0;
 
@@ -30,7 +28,7 @@ void print_rev(char *s)
 	{
 		tmp = s[i];
 		s[i] = s[count];
-		s(firstC) = s[i];
+		s[firstC] = s[i];
 		i--;
 		count++;
 	}
