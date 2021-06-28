@@ -25,8 +25,6 @@ void print_rev(char *s)
 
 	while (count < i)
 	{
-		int tmp = 0;
-
 		tmp = s[i];
 		s[i] = s[count];
 		s[firstC] = s[i];
