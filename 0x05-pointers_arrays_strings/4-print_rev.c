@@ -10,27 +10,20 @@
  */
 void print_rev(char *s)
 {
-	int length;
-	int i;
-	int lastC;
-	int count, firstC;
+	int i = 0;
+	int aux = 0;
+	char ltemp;
 
-	for (length = 0; *(s + length) != '\0'; length++)
-	{
-		i++;
-	}
+	while (*(s + i) != '\0')
+		i += 1;
 	i -= 1;
 
-	firstC = 0;
-	count = 0;
-	lastC = 0;
-
-	while (count < i)
+	while (aux < i)
 	{
-		lastC = s[i];
-		s[i] = s[count];
-		s[firstC] = s[i];
+		ltemp = s[i];
+		s[i] = s[aux];
+		s[aux] = ltemp;
+		aux++;
 		i--;
-		count++;
 	}
 }
