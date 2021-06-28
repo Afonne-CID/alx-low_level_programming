@@ -12,6 +12,7 @@ void print_rev(char *s)
 {
 	int length;
 	int i;
+	int lastC;
 	int count, firstC;
 
 	for (length = 0; *(s + length) != '\0'; length++)
@@ -22,12 +23,11 @@ void print_rev(char *s)
 
 	firstC = 0;
 	count = 0;
-	
-	int tmp;
+	lastC = 0;
 
 	while (count < i)
 	{
-		tmp = s[i];
+		lastC = s[i];
 		s[i] = s[count];
 		s[firstC] = s[i];
 		i--;
