@@ -22,7 +22,8 @@ void print_rev(char *s)
 
 	firstC = 0;
 	count = 0;
-	tmp = 0;
+	
+	int tmp;
 
 	while (count < i)
 	{
