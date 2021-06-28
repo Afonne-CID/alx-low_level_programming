@@ -12,19 +12,18 @@ void print_rev(char *s)
 {
 	int length;
 	int i;
-	int tmp;
-	int firstC;
-	int count;
-	
+	int count, firstC;
+
 	for (length = 0; *(s + length) != '\0'; length++)
 	{
 		i++;
 	}
 	i -= 1;
-	
-	tmp = 0;
+
 	firstC = 0;
 	count = 0;
+
+	int tmp = 0;
 
 	while (count < i)
 	{
