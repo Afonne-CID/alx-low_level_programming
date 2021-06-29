@@ -4,7 +4,8 @@
 /**
  * print_array - Function to print the value in pointers
  *
- * @a and @n: parameters to be passed to function print_array
+ * @a: first pointer parameter
+ * @n: varaible parameters to be passed to function print_array
  *
  * Return: nothing
  */
@@ -25,7 +26,7 @@ void print_array(int *a, int n)
 			{
 				printf("%d\n", value);
 			}
-	
+
 			else
 			{
 				printf("%d, ", value);
