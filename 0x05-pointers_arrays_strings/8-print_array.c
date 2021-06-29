@@ -1,26 +1,32 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
- * puts_half - function that prints half of a string
+ * print_array - Function to print the value in pointers
  *
- * @str: pointer to char
+ * @a and @n: parameters to be passed to function print_array
+ *
  * Return: nothing
  */
-
-void puts_half(char *str)
+void print_array(int *a, int n)
 {
-	int i = 0;
-	int n = 0;
+	int count;
+	int value;
 
-	while (str[i] != '\0')
-		i += 1;
-	n = i / 2;
-	if (i % 2 == 1)
-		n += 1;
-	while (str[n] != '\0')
+	value = 0;
+
+	for (count = 0; count < n; count++)
 	{
-		_putchar(*(str + n));
-		n++;
+		value = *(a + count);
+		
+		if (count == n - 1)
+		{	
+			printf("%d\n", value);
+		}
+		
+		else
+		{
+			printf("%d,", value);
+		}
 	}
-	_putchar('\n');
 }
