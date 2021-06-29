@@ -15,18 +15,26 @@ void print_array(int *a, int n)
 
 	value = 0;
 
-	for (count = 0; count < n; count++)
+	if (n > 0)
 	{
-		value = *(a + count);
-		
-		if (count == n - 1)
-		{	
-			printf("%d\n", value);
-		}
-		
-		else
+		for (count = 0; count < n; count++)
 		{
-			printf("%d,", value);
+			value = *(a + count);
+
+			if (count == n - 1)
+			{
+				printf("%d\n", value);
+			}
+	
+			else
+			{
+				printf("%d, ", value);
+			}
 		}
+	}
+	else
+	{
+		printf("\n");
+		_putchar('\n');
 	}
 }
