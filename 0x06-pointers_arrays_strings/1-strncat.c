@@ -1,10 +1,12 @@
 #include "holberton.h"
 
 /**
- * _strncat - Function concatenates a specified number from source to destination
+ * _strncat - Function concatenates a specified number \
+ * from source to destination
  *
- * @dest - destination string
- * @src - source string
+ * @dest: destination of string
+ * @src: source string
+ * @n: number to be concatenated
  *
  * Return: pointer
  */
@@ -18,7 +20,7 @@ char *_strncat(char *dest, char *src, int n)
 		for (i = 0; *(src + i) != '\0' && (i < n);)
 		{
 			i++;
-		}	
+		}
 
 		for (count = 0; *(dest + count) != '\0';)
 		{
