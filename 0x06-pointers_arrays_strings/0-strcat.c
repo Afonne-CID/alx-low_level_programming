@@ -12,19 +12,26 @@ char *_strcat(char *dest, char *src)
 {
 	int i;
 	int count;
-	int source;
+	int copy;
 
 	for (i = 0; *(dest + i) != '\0';)
 	{
-		++i;
+		i++;
 	}
 
 	for (count = 0; *(src + count) != '\0';)
 	{
-		dest[++i] = src[count++];
+		count++;
 	}
 
-	dest[++i]  '\0';
+	copy = 0;
+
+	while (copy < count)
+	{
+		dest[i] = src[copy];
+		copy++;
+		i++;
+	}
 
 	return (dest);
 }
