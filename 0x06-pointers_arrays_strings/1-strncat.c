@@ -15,7 +15,7 @@ char *_strncat(char *dest, char *src, int n)
 	if (n > 0)
 	{
 
-		for (i = 0; *(src + i) != '\0' && i <= n;)
+		for (i = 0; *(src + i) != '\0' && (i < n);)
 		{
 			i++;
 		}	
@@ -27,11 +27,11 @@ char *_strncat(char *dest, char *src, int n)
 
 		copy = 0;
 
-		while (copy < count)
+		while (copy < i)
 		{
-			dest[i] = src[copy];
-			i++;
+			dest[count] = src[copy];
 			copy++;
+			count++;
 		}
 	}
 
