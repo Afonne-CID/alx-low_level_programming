@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <string.h>
 
 /**
  * _strcpy - Function copies the string in the copied source
@@ -15,7 +14,7 @@ char *_strcpy(char *dest, char *src)
 
 	for (i = 0; src[i] != '\0'; i++)
 	{
-		dest[i] = src[i];
+		dest[i] = *(src + i);
 		i++;
 	}
 
