@@ -11,7 +11,7 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i, count, copy;
+	int count;
 
 	if (n > 0)
 	{
