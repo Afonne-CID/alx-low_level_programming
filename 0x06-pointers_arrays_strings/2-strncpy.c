@@ -13,7 +13,7 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int count;
 
-	for (count = 0; *(dest + count) != '\0' && count < n;)
+	for (count = 0; *(src + count) != '\0' && count < n;)
 	{
 		dest[count] = src[count];
 		++count;
@@ -28,4 +28,4 @@ char *_strncpy(char *dest, char *src, int n)
 	}
 
 	return (dest);
-}
+i}
