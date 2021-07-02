@@ -23,10 +23,6 @@ char *cap_string(char *str)
 		{
 			if ((str[i] == separators[cnt]) && (str[i + 1] >= 'a' && str[i + 1] <= 'z'))
 			{
-				if (str[i] == 9)
-				{
-					str[i] = 32;
-				}
 				str[i + 1] -= 32;
 			}
 		}
