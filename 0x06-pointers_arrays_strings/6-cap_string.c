@@ -9,24 +9,25 @@
 char *cap_string(char *str)
 {
 	int i;
+	int count;
+	char separators[] = {32, 10, 9, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (i == 0)
+
+		if (str[i] == 0 && str[i] >= 'a' && str[i] <= 'z')
 		{
 			str[i] -= 32;
 		}
-		else if (str[i] == ' ')
+
+		for (count = 0; separators[count] != '\0'; count++)
 		{
-			str[i + 1] -= 32;
-		}
-		else
-		{
-			if ((str[i] >= 'A') && (str[i] <= 'Z'))
+			if ((str[i] == separators[count]) && (str[i + 1] >= 'a' && str[i + 1] <= 'z'))
 			{
-				str[i] += 32;
+				str[i + 1] -= 32;
 			}
 		}
 	}
+
 	return (str);
 }
