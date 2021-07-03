@@ -13,7 +13,11 @@ void times_table(void)
 		for (cnt = 0; cnt <= times; cnt++)
 		{
 			multi = i * cnt;
+<<<<<<< HEAD:9-times_table.c
+			if (multi >= 10)
+=======
 			if (multi > 10)
+>>>>>>> d96f23f8f50f6a6e147b6ac3f5f29513ff66c0e2:0x02-functions_nested_loops/9-times_table.c
 			{
 				_putchar(multi / 10 + '0');
 				_putchar(multi % 10 + '0');
