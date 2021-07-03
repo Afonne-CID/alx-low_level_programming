@@ -1,1 +1,1 @@
-Learning how to debug not as a student, but as an industry Software Engineer.
+This is the first project on C programming language

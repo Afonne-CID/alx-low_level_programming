@@ -16,12 +16,34 @@ void times_table(void)
 		for (cnt = 0; cnt <= times; cnt++)
 		{
 			multi = i * cnt;
-			
-			_putchar(multi % 10 = 0 ? multi / 10 : );
+			if (multi % 10 > 0)
+			{
+				_putchar(multi / 10 + '0');
+				_putchar(multi % 10 + '0');
 
-			_putchar(multi % 10 + '0');
-			_putchar(',');
-			_putchar(' ');
+				if (cnt != times)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
+				else
+				{
+					_putchar('\n');
+				}
+			}
+			else
+			{
+				_putchar(multi % 10 + '0');
+				if (cnt != times)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
+				else
+				{
+					_putchar('\n');
+				}
+			}
 		}
 
 		_putchar('\n');
