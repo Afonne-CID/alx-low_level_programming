@@ -37,9 +37,4 @@ char *string_toupper(char *);
 char *cap_string(char *);
 char *_strncat(char *dest, char *src, int n);
 char *leet(char *);
-<<<<<<< HEAD
 char *rot13(char *);
-void times_table(void);
-=======
-int largest_number(int a, int b, int c);
->>>>>>> ea5363c55919809b9206697b58f481f6208c6276
