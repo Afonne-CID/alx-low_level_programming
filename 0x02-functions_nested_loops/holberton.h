@@ -40,3 +40,4 @@ char *leet(char *);
 char *rot13(char *);
 void times_table(void);
 int largest_number(int a, int b, int c);
+int add(int, int);
