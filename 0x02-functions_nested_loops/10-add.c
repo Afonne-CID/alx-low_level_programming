@@ -7,7 +7,7 @@
  *
  * Return: reuslt after addition (sum)
  */
-int add (int num1, int num2)
+int add(int num1, int num2)
 {
 	int sum;
 
