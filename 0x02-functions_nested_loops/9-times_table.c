@@ -2,14 +2,11 @@
 
 /**
  * times_table - prints the 9 times table
- * 
  *Return: Always success (0)
  */
 void times_table(void)
 {
-	int i, cnt, multi, times;
-
-	times = 9;
+	int i, cnt, multi, times = 9;
 
 	for (i = 0; i <= times; i++)
 	{
@@ -24,9 +21,8 @@ void times_table(void)
 				if (cnt != times)
 				{
 					_putchar(',');
-					_putchar(' ');
+					_putchar(9);
 				}
-				else
 				{
 					_putchar('\n');
 				}
@@ -37,15 +33,14 @@ void times_table(void)
 				if (cnt != times)
 				{
 					_putchar(',');
-					_putchar(' ');
+					_putchar(9);
 				}
-				else
+				else 
 				{
 					_putchar('\n');
 				}
 			}
 		}
-
 		_putchar('\n');
 	}
 }
