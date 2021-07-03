@@ -16,7 +16,7 @@ void times_table(void)
 		for (cnt = 0; cnt <= times; cnt++)
 		{
 			multi = i * cnt;
-			if (multi % 10 > 0)
+			if (multi > 10)
 			{
 				_putchar(multi / 10 + '0');
 				_putchar(multi % 10 + '0');
