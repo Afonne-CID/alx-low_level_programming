@@ -16,7 +16,10 @@ void print_to_98(int n)
 		for (num = n; num != 98 - 1; num--)
 		{
 			printf("%d", num);
-			num == 98 ? printf("\n") : printf(", ");
+			if (num != 98)
+			{
+				printf(", ");
+			}
 		}
 	}
 	if (n < 98 && n > 0)
@@ -24,7 +27,10 @@ void print_to_98(int n)
 		for (cnt = n; cnt != 98 + 1; cnt++)
 		{
 			printf("%d", cnt);
-			cnt == 98 ? printf("\n") : printf(", ");
+			if (cnt != 98)
+			{
+				printf(", ");
+			}
 		}
 	}
 	if (n < 0)
@@ -32,7 +38,10 @@ void print_to_98(int n)
 		for (i = n; i != 98 + 1; i++)
 		{
 			printf("%d", i);
-			i == 98 ? printf("\n") : printf(", ");
+			if (i != 98)
+			{
+				printf(", ");
+			}
 		}
 	}
 	if (n == 98)
