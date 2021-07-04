@@ -38,3 +38,4 @@ char *cap_string(char *);
 char *_strncat(char *dest, char *src, int n);
 char *leet(char *);
 int largest_number(int a, int b, int c);
+int largest_number(int a, int b, int c);

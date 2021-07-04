@@ -24,7 +24,7 @@ void times_table(void)
 					_putchar(32);
 				}
 			}
-			else
+			else if (multi <= 9)
 			{
 				_putchar(multi % 10 + '0');
 				if (cnt != times)
