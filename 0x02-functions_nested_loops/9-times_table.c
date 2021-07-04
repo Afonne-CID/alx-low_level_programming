@@ -21,12 +21,7 @@ void times_table(void)
 				if (cnt != times)
 				{
 					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-				}
-				else
-				{
-					_putchar('\n');
+					_putchar(32);
 				}
 			}
 			else
@@ -35,12 +30,7 @@ void times_table(void)
 				if (cnt != times)
 				{
 					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-				}
-				else
-				{
-					_putchar('\n');
+					_putchar(32);
 				}
 			}
 		}
