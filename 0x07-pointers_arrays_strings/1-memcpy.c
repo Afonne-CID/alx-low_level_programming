@@ -2,9 +2,9 @@
 
 /**
  * _memcpy - function copies memory area
- * @s: parameter 1 (pointer to character) - the memory address to be filled
- * @b: parameter 2 (pointer to character) - the character to fill
- * @n: parameter 3 (pointer to integer) - the count of bits to be filled
+ * @dest: parameter 1 (pointer to character) - memory address to be copied to
+ * @src: parameter 2 (pointer to character) - the character to copy from
+ * @n: parameter 3 (pointer to integer) - the count of bits to be copied
  *
  * Return: Result
  */
@@ -17,6 +17,6 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 		dest[cnt] = src[cnt];
 	}
 
-        return (dest);
+	return (dest);
 }
 
