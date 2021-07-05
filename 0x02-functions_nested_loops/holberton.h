@@ -42,7 +42,3 @@ void times_table(void);
 int largest_number(int a, int b, int c);
 int add(int, int);
 void print_to_98(int n);
-char *_memset(char *s, char b, unsigned int n);
-=======
-int largest_number(int a, int b, int c);
->>>>>>> 606fd9a49d11b7fbd43f4955f85850914b64dd5a
