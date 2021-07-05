@@ -1,0 +1,1 @@
+This project is about pointers-to-pointers and how to use them, whate are multidimensional arrays andhow to uise them, then finally, what are themost common C standard library functions to manipulate strings.
