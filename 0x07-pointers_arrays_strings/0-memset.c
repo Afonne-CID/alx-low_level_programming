@@ -21,5 +21,7 @@ char *_memset(char *s, char b, unsigned int n)
 		}
 	}
 
+	s[cnt + 1] = '\0';
+
 	return (s);
 }
