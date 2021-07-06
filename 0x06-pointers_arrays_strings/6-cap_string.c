@@ -8,19 +8,24 @@
  */
 char *cap_string(char *str)
 {
-	int i;
-	int cnt;
-	char separators[] = {32, 10, 9, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
+	int i, j;
+	char separators[] = {9, 32, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	for (i = 0; str[i] != '\0'; i++)
+	i = 0;
+
+	while (str[i] != '\0')
 	{
-		for (cnt = 0; separators[cnt] != '\0'; cnt++)
+		j = 0;
+
+		while (separators[j] != '\0')
 		{
-			if ((str[i] == separators[cnt]) && (str[i + 1] >= 'a' && str[i + 1] <= 'z'))
+			if (str[i] == separators[j] && str[i + 1] >= 'a' && str[i + 1] <= 'z')
 			{
 				str[i + 1] -= 32;
 			}
+			j++;
 		}
+		i++;
 	}
 	return (str);
 }
