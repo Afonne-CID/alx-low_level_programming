@@ -1,35 +1,32 @@
 #include "holberton.h"
-
 /**
- * cap_string - Capitalize each word
- * @str: string parameter to work on
+ * cap_string - capitalizes all words of a string
+ * @str: the string to change the first letter of a word in uppercase
  *
- * Return: result
+ * Return: capitalizes letters
  */
 char *cap_string(char *str)
 {
-	int i, j;
-	char separators[] = {9, 32, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
+	int i;
+	int j;
+	char c[] = {44, 59, 46, 33, 63, 34, 40, 41, 123, 125, 32, 10, 9};
 
 	i = 0;
 
-	if (str[0] >= 'a' && str[0] <= 'z')
-		str[0] -= 32;
-
 	while (str[i] != '\0')
 	{
-		j = 0;
-
-		while (separators[j] != '\0')
+		if (i == 0 && str[i] >= 97 && str[i] <= 122)
 		{
-			if (str[i] == separators[j] && str[i + 1] >= 'a' && str[i + 1] <= 'z')
+			str[i] = str[i] - 32;
+		}
+		j = 0;
+		while (c[j] != '\0')
+		{
+			if (c[j] == str[i] && (str[i + 1] >= 97 && str[i + 1] <= 122))
 			{
-				str[i + 1] -= 32;
+				str[i + 1] = str[i + 1] - 32;
 			}
 			j++;
-
-			if (str[i] == 9)
-				str[i] = 32;
 		}
 		i++;
 	}
