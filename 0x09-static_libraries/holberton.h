@@ -1,3 +1,5 @@
+#ifndef _H
+#define _H
 int _putchar(char c);
 void print_alphabet(void);
 void print_alphabet_x10(void);
@@ -28,7 +30,6 @@ void puts2(char *str);
 void puts_half(char *str);
 void print_array(int *a, int n);
 char *_strcpy(char *dest, char *src);
-int _atoi(char *s);
 char *_strcat(char *dest, char *src);
 char *_strncpy(char *dest, char *src, int n);
 int _strcmp(char *s1, char *s2);
@@ -59,3 +60,5 @@ int _sqrt_recursion(int n);
 int _strlen_recursion(char *s);
 int is_palindrome(char *s);
 int is_prime_number(int n);
+int _atoi(char *s);
+#endif
