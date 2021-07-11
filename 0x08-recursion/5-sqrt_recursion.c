@@ -1,13 +1,6 @@
 #include "holberton.h"
 
 /**
- * _sqrt_recursion - returns the natural square root of a number
- * @n: parameter
- *
- * Return: square root
- */
-#include "holberton.h"
-/**
  * square_root - find the natural square root
  * @i: number
  * @j: incrementor
