@@ -6,18 +6,37 @@
  *
  * Return: square root
  */
+#include "holberton.h"
+/**
+ * square_root - find the natural square root
+ * @i: number
+ * @j: incrementor
+ *
+ * Return: the number found
+ */
+int square_root(int i, int j)
+{
+	if (i * i == j)
+	{
+		return (i);
+	}
+	else if (i * i > j)
+	{
+		return (-1);
+	}
+	else
+	{
+		return (square_root(i + 1, j));
+	}
+}
+/**
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: number
+ * Return: the natural square root found
+ */
 int _sqrt_recursion(int n)
 {
-	int i = 0;
+	int a = 1;
 
-	if (n < 0)
-		return (0);
-	if (n == 1)
-		return (1);
-
-	if (n / i != i && i != n)
-	{
-		return (1 + _sqrt_recursion(i));
-	}
-	return (-1);
+	return (square_root(a, n));
 }
