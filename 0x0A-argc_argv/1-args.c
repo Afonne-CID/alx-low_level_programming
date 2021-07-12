@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "holberton.h"
 
 /**
  * main - Entry point
@@ -21,7 +22,9 @@ int main(int argc, char *argv[] __attribute__((unused)))
 		printf("%d\n", cnt - 1);
 	}
 	else
+	{
 		printf("%d\n", 0);
+	}
 	return (0);
 
 }
