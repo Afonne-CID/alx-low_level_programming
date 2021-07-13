@@ -5,8 +5,10 @@
 /**
  * create_array - function creates an array of chars, and initializes it with \
  * a specific char
- *@size: param 1
- *@c: param 2
+ * @size: param 1
+ * @c: param 2
+ *
+ * Return: pointer to created array
  */
 char *create_array(unsigned int size, char c)
 {
