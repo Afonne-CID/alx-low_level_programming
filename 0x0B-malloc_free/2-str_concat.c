@@ -28,22 +28,17 @@ char *str_concat(char *s1, char *s2)
 	concat = malloc((sizeof(char) * sum) + 1);
 	if (concat == NULL)
 		return (NULL);
-
 	count = 0;
 	while (*(s1 + count) != '\0')
 	{
 		concat[count] = *(s1 + count);
 		count++;
 	}
-
-	z = 0;
-	while (*(s2 + z) != '\0')
+	for (z = 0; *(s2 + z) != '\0'; z++)
 	{
 		concat[count + 1] = *(s2 + z);
-		z++;
 	}
 
 	concat[count + 1] = '\0';
-
 	return (concat);
 }
