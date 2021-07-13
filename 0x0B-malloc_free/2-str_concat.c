@@ -13,7 +13,7 @@ char *str_concat(char *s1, char *s2)
 {
 	char *concat;
 	int i, j, sum, z, count;
-	
+
 	for (i = 0; *(s1 + i) != '\0';)
 	{
 		i++;
@@ -31,7 +31,7 @@ char *str_concat(char *s1, char *s2)
 
 	count = 0;
 	while (*(s1 + count) != '\0')
-        {
+	{
 		concat[count] = *(s1 + count);
 		count++;
 	}
@@ -41,7 +41,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		concat[count + 1] = *(s2 + z);
 		z++;
-	}	
+	}
 
 	concat[count + 1] = '\0';
 
