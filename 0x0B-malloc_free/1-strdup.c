@@ -11,15 +11,21 @@
  */
 char *_strdup(char *str)
 {
-	int i, n = _strlen(str);
+	int i, count;
+	char *newcpy;
 
-	char *newcpy = malloc(sizeof(char) * n);
+	for (count = 0; str[count] != '\0';)
+        {
+                count++;
+        }
+
+	newcpy	= malloc(sizeof(char) * count);
 
 	if (newcpy == NULL)
 		return (NULL);
 	if (*str == '\0')
 		return (NULL);
-	for (i = 0; i < n; i++)
+	for (i = 0; i < count; i++)
 	{
 		newcpy[i] = str[i];
 	}
