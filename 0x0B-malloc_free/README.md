@@ -1,0 +1,1 @@
+This project is solely on what is the difference between automatic and dynamic allocation, what's 'malloc' and 'free' and how to use them, why and when to use 'malloc' and how to use 'valgrind' to check for memory leak in the program. It's all about Dynamic memory allocation- one of a two (static and dynamic memory allocation).
