@@ -1,44 +1,49 @@
-#include <stdio.h>
-#include <stdlib.h>
+/*
+ * File: 1-string_nconcat.c
+ * Auth: Brennan D Baraban
+ */
+
 #include "holberton.h"
+#include <stdlib.h>
 
 /**
- * str_concat - concatenates two strings
- * @s1: param 1
- * @s2: param 2
+ * string_nconcat - Concatenates two strings using at
+ *                  most an inputted number of bytes.
+ * @s1: The first string.
+ * @s2: The second string.
+ * @n: The maximum number of bytes of s2 to concatenate to s1.
  *
- * Return: result
+ * Return: If the function fails - NULL.
+ *         Otherwise - a pointer to the concatenated space in memory.
  */
-char *str_concat(char *s1, char *s2)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *concat;
-	int i, j, sum, z, count;
+	unsigned int len = n, index;
 
-	for (i = 0; *(s1 + i) != '\0';)
-	{
-		i++;
-	}
-	for (j = 0; *(s2 + i) != '\0';)
-	{
-		j++;
-	}
+	if (s1 == NULL)
+		s1 = "";
 
-	sum = i + j;
+	if (s2 == NULL)
+		s2 = "";
 
-	concat = malloc((sizeof(char) * sum) + 1);
+	for (index = 0; s1[index]; index++)
+		len++;
+
+	concat = malloc(sizeof(char) * (len + 1));
+
 	if (concat == NULL)
 		return (NULL);
-	count = 0;
-	while (*(s1 + count) != '\0')
-	{
-		concat[count] = *(s1 + count);
-		count++;
-	}
-	for (z = 0; *(s2 + z) != '\0'; z++)
-	{
-		concat[count + 1] = *(s2 + z);
-	}
 
-	concat[count + 1] = '\0';
+	len = 0;
+
+	for (index = 0; s1[index]; index++)
+		concat[len++] = s1[index];
+
+	for (index = 0; s2[index] && index < n; index++)
+		concat[len++] = s2[index];
+
+	concat[len] = '\0';
+
 	return (concat);
 }
