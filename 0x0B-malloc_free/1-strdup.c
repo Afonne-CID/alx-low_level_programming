@@ -23,6 +23,8 @@ char *_strdup(char *str)
 
 	if (newcpy == NULL)
 		return (NULL);
+	if (str == NULL)
+		return (NULL);
 
 	for (i = 0; i < count; i++)
 	{
