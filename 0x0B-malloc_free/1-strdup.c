@@ -23,8 +23,6 @@ char *_strdup(char *str)
 
 	if (newcpy == NULL)
 		return (NULL);
-	if (*str == '\0')
-		return ('\0');
 	for (i = 0; i < count; i++)
 	{
 		newcpy[i] = str[i];
