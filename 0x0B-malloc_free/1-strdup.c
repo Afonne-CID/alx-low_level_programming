@@ -21,11 +21,11 @@ char *_strdup(char *str)
 
 	newcpy = malloc(sizeof(char) * count + 1);
 
-	if (newcpy == '\0')
-		return ('\0');
+	if (newcpy == NULL)
+		return (NULL);
 
-	if (str == '\0')
-		return ('\0');
+	if (*str == '\0')
+		return (NULL);
 
 	for (i = 0; i < count; i++)
 	{
