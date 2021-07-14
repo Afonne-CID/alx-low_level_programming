@@ -14,6 +14,9 @@ char *str_concat(char *s1, char *s2)
 	char *concat;
 	int i, j, z, count;
 
+	if (s1 || s2 == NULL)
+		return (NULL);
+
 	for (i = 0; *(s1 + i) != '\0';)
 	{
 		i++;
