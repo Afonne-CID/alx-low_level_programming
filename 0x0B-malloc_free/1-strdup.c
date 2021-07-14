@@ -14,6 +14,8 @@ char *_strdup(char *str)
 	int i, count;
 	char *newcpy;
 
+	if (str == NULL)
+		return (NULL);
 	for (count = 0; str[count] != '\0';)
 	{
 		++count;
@@ -22,8 +24,6 @@ char *_strdup(char *str)
 	newcpy = malloc(sizeof(char) * count + 1);
 
 	if (newcpy == NULL)
-		return (NULL);
-	if (str == NULL)
 		return (NULL);
 
 	for (i = 0; i < count; i++)
