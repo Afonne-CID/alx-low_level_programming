@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "holberton.h"
 
 /**
@@ -10,6 +12,11 @@
 void free_grid(int **grid, int height)
 {
 	int a;
+
+	if (grid == '\0' || height <= 0)
+	{
+		return;
+	}
 
 	for (a = height - 1; a >= 0 ; a--)
 	{
