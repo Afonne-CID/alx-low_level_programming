@@ -1,45 +1,91 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "holberton.h"
+#include <stdlib.h>
 
 /**
- * str_concat - concatenates two strings
- * @s1: param 1
- * @s2: param 2
+ * _strlen - give the length of a string
+ * @s: the string
  *
- * Return: result
+ * Return: the length of a string
+ */
+int _strlen(char *s)
+{
+	int i;
+
+	for (i = 0 ; s[i] != '\0' ; i++)
+		;
+	return (i);
+}
+
+/**
+ * _strcat - concatenates two strings
+ * @dest: input parameter string
+ * @src: input parameter string
+ *
+ * Return: dest
+ */
+char *_strcat(char *dest, char *src)
+{
+	int a;
+	int b;
+
+	a = 0;
+
+	while (dest[a] != 0)
+	{
+		a++;
+	}
+
+	b = 0;
+
+	while (src[b] != 0)
+	{
+		dest[a] = src[b];
+		a++;
+		b++;
+	}
+	return (dest);
+}
+
+/**
+ * str_concat - concatenate to strings
+ * @s1: the string to print
+ * @s2: the string to print
+ *
+ * Return: pointer that contains the content of s1 followed by s2
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *concat;
-	int i, j, z, count;
+	int length;
+	char *space;
 
-	if (s1 || s2 == NULL)
-		return (NULL);
-
-	for (i = 0; *(s1 + i) != '\0';)
+	if (s1 == '\0')
 	{
-		i++;
+		s1 = "";
 	}
-	for (j = 0; *(s2 + i) != '\0';)
+	if (s2 == '\0')
 	{
-		j++;
+		s2 = "";
 	}
 
-	concat = malloc((sizeof(char) * i * j) + 1);
-	if (concat == NULL)
-		return (NULL);
-	count = 0;
-	while (*(s1 + count) != '\0')
+	length = _strlen(s1) + _strlen(s2);
+	if (s1 != '\0' && s2 != '\0')
 	{
-		concat[count] = *(s1 + count);
-		count++;
-	}
-	for (z = 0; *(s2 + z) != '\0'; z++)
-	{
-		concat[count + 1] = *(s2 + z);
-	}
+		space = malloc(sizeof(char) * length + 1);
 
-	concat[count + 1] = '\0';
-	return (concat);
+		if (space == '\0')
+		{
+			return ('\0');
+		}
+		else
+		{
+			space = _strcat(space, s1);
+			space = _strcat(space, s2);
+		}
+	}
+	else
+	{
+		space = "";
+	}
+	return (space);
+	free(space);
 }
