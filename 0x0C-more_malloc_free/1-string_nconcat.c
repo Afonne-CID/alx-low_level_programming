@@ -29,18 +29,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (concat == NULL)
 		return (NULL);
 	count = 0;
-	while (*(s1 + count) != '\0')
+	while (s1[count])
 	{
-		concat[count] = *(s1 + count);
+		concat[count] = s1[count];
 		count++;
 	}
 	z = 0;
-	while (*(s2 + z) != '\0' && z < n)
+	while (s2[z] && z < n)
 	{
-		concat[count] = *(s2 + z);
+		concat[count] = s2[z];
 		z++;
 		count++;
 	}
-	concat[count] = '\0';
+	concat[count + 1] = '\0';
 	return (concat);
 }
