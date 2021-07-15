@@ -1,51 +1,87 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
 
+char *_strcat(char *dest, char *src);
+
 /**
- * argstostr - concatenates all the arguments supplied to the program
- * @ac: param 1
- * @av: param 2
+ * argstostr - concatenates all the arguments
+ * @av: the content
+ * @ac: the size of the content
  *
- * Return: result
+ * Return: a pointer to a new string
  */
 char *argstostr(int ac, char **av)
 {
-	int j, i, len, z;
-	char *conc_str;
-
-	len = 0;
+	char *new, *salt;
+	int i, j, k;
 
 	if (ac == 0 || av == NULL)
-		return (NULL);
-
-	conc_str = malloc(sizeof(char *) * ac);
-	if (conc_str == NULL)
-		return (NULL);
-
-	for (z = 0; av[j][z] != '\0'; z++)
 	{
-		len++;
+		return (NULL);
 	}
-
-	for (j = 0; j < ac; j++)
+	else
 	{
-		conc_str[j] = malloc((sizeof(char) * len) + 1);
-		if (conc_str == NULL)
+		for (i = 0, k = 0 ; i < ac ; i++, k++)
 		{
-			for (len = len - 1; len >= 0; len--)
+			for (j = 0 ; av[i][j] != '\0' ; j++, k++)
 			{
-				free(conc_str[len]);
+				;
 			}
-			free(conc_str);
-			return (NULL);
+		}
+		new = malloc(sizeof(char) * (k + 1));
+		salt = "\n";
+		for (i = 0 ; i < ac ; i++)
+		{
+			new = _strcat(new, av[i]);
+			if (new == NULL)
+			{
+				return (NULL);
+			}
+			if (i + 1 < ac)
+			{
+				new = _strcat(new, salt);
+				if (new == NULL)
+				{
+					return (NULL);
+				}
+			}
 		}
 
-		for (i = 1; av[j][i] != '\0'; i++)
-		{
-			conc_str[j][i] = av[j][i];
-		}
-		_putchar('\n');
 	}
-	return (conc_str);
+	new = _strcat(new, salt);
+	if (new == NULL)
+	{
+		return (NULL);
+	}
+	return (new);
+}
+
+/**
+ * _strcat - concatenates two strings
+ * @dest: input parameter string
+ * @src: input parameter string
+ *
+ * Return: dest
+ */
+char *_strcat(char *dest, char *src)
+{
+	int a;
+	int b;
+
+	a = 0;
+
+	while (dest[a] != 0)
+	{
+		a++;
+	}
+
+	b = 0;
+
+	while (src[b] != 0)
+	{
+		dest[a] = src[b];
+		a++;
+		b++;
+	}
+	return (dest);
 }
