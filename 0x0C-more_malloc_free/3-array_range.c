@@ -12,7 +12,7 @@
 int *array_range(int min, int max)
 {
 	int i, j, z = 0;
-	void *grid;
+        int *grid;
 
 	if (min > max)
 		return (NULL);
