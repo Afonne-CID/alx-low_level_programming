@@ -11,7 +11,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	int i;
-        int *grid;
+        void *grid;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -22,5 +22,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		grid[i] = 0;
 	}
-	return (grid);
+        return (grid);
 }
