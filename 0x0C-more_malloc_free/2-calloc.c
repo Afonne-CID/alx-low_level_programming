@@ -10,7 +10,7 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int i;
+	int i;
         int *grid;
 
 	if (nmemb == 0 || size == 0)
@@ -18,7 +18,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	grid = malloc(sizeof(size) * nmemb);
 	if (grid == NULL)
 		return (NULL);
-	for (i = 0; i < nmemb; i++)
+	for (i = 0; i < (int) nmemb; i++)
 	{
 		grid[i] = 0;
 	}
