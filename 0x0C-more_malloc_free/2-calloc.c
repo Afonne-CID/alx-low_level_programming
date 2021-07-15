@@ -11,14 +11,14 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i;
-        char *grid;
+        int *grid;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	grid = malloc(size * nmemb);
+	grid = malloc(sizeof(size) * nmemb);
 	if (grid == NULL)
 		return (NULL);
-	for (i = 0; i < (size * nmemb); i++)
+	for (i = 0; i < nmemb * i++)
 	{
 		grid[i] = 0;
 	}
