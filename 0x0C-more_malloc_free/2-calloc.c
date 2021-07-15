@@ -15,7 +15,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	grid = malloc(size);
+	grid = malloc(sizeof(nmemb) * size);
 	if (grid == NULL)
 		return (NULL);
 	for (i = 0; i < nmemb; i++)
