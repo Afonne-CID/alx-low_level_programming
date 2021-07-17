@@ -6,9 +6,9 @@
 /**
  * simple_print_buffer - prints buffer in hexa
  * @buffer: the address of memory to print
- * @size: the size of the memory to print
+ * @size: the size of memory to print
  *
- * Return: Nothing.
+ * Return: nothing
  */
 void simple_print_buffer(char *buffer, unsigned int size)
 {
@@ -31,20 +31,24 @@ void simple_print_buffer(char *buffer, unsigned int size)
 	printf("\n");
 }
 
-/**
+/** 
  * main - check the code for ALX School students.
  *
- * Return: Always 0.
+ * REturn: Always 0.
  */
 int main(void)
 {
-	char *a;
+	char *p;
+	int i;
 
-	a = _calloc(98, sizeof(char));
-	strcpy(a, "Holberton");
-	strcpy(a + 9, " School! :)\n");
-	a[97] = '!';
-	simple_print_buffer(a, 98);
-	free(a);
+	p = malloc(sizeof(char) * 10);
+	p = _realloc(p, sizeof(char) * 10, sizeof(char) * 98);
+	i = 0;
+	while (i < 98)
+	{
+		p[i++] = 98;
+	}
+	simple_print_buffer(p, 98);
+	free(p);
 	return (0);
 }
