@@ -3,7 +3,7 @@
 
 /**
  * _realloc - reallocates a memory block using malloc
- * @:ptr: previously allocated memroyi
+ * @ptr: previously allocated memroyi
  * @old_size: size of the previous allocation
  * @new_size: new size to be reallocated
  *
@@ -21,9 +21,9 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	{
 		ptr = malloc(sizeof(unsigned int) * old_size * new_size + 1);
 		if (ptr == NULL)
-			return(ptr);
+			return (ptr);
 	}
-	if ((new_size = 0) && (ptr != NULL))
+	if ((new_size == 0) && (ptr != NULL))
 	{
 		free(ptr);
 		return (NULL);
