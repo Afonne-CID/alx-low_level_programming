@@ -1,39 +1,48 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "holberton.h"
+#define ERR_MSG "Error"
 
-/**
- * main - entry point is a program that multiplies two positive numbers
- * @num1: first param (argc)
- * @num2: second param (argv)
+int is_digit(char *s);
+
+/** 
+ * main -Entry point
+ * @argc: number of commaline inputs
+ * @argv: the actual commanline inputs
  *
- * Return: product of two numbers
+ * Return: Sum
  */
-int main(int num1, char **num2)
+int main(int argc, char *argv[])
 {
-	int j, i, cnt, mul;
-	int arr[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+	int i;
 
-	if (num1 < 2 || num1 > 2)
-		exit(0);
-	for (i = 0; i < num1; i++)
+	if (argc != 3)
 	{
-		for (cnt = 0; arr[cnt]; cnt++)
+		for (i = 0; ERR_MSG[i] != '\0'; i++)
 		{
-			if (!(*(num2 + i) == arr[cnt] || *(num2 + i) == arr[cnt]))
-				exit(98);
+			_putchar(ERR_MSG[i]);
 		}
+		_putchar(10);
+		exit(98);
 	}
-	for (i = 0; i < num1; i++)
+	if (is_digit(argv[1]) == 0)
+			printf("%s\n", argv[1]);
+	return (0);
+}
+
+/**                                                            
+ * is_digit - checks a string for digits                       
+ * @s: the string parameter                                    
+ *                                                             
+ * Return: answer                                              
+ */                                                            
+int is_digit(char *s)                                          
+{                                                              
+	while (*s)                         
 	{
-		for (j = 0; arr[j]; j++)
-		{
-			
-			if (num[i] == arr[j])
-			{
-				mul = *(num2 + i) * *(num2 + j);
-			}
-			mul % 10 ? _putchar(mul / 10) : _putchar(mul % 10);
-		}
-		_putchar('\n');
+		if (*s < 48 || *s > 57)
+			return (1);
+		s++;
 	}
+	return (0);
 }
