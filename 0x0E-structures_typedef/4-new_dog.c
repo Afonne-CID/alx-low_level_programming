@@ -3,6 +3,7 @@
 
 int _strlen(char *c);
 char *_strcpy(char *dest, char *src);
+dog_t *new_dog(cahr *name, float age, char *owner);
 
 /**
  * _strlen - calculates length of string
