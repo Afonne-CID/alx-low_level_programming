@@ -21,6 +21,7 @@ dog_t *new_dog(char *name, float age __attribute__((unused)), char *owner)
 		return (NULL);
 	}
 	billy->name = name;
+	billy->name = age;
 	billy->owner = owner;
 
 	return (billy);
