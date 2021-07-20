@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int _strlen(char *c);
-char *_strcpy(char *dest, char *src);
+void *_strcpy(char *dest, char *src);
 
 /**
  * _strlen - calculates length of string
@@ -29,7 +29,7 @@ int _strlen(char *c)
  *
  * Return: the address of the destination
  */
-char *_strcpy(char *dest, char *src)
+void *_strcpy(char *dest, char *src)
 {
 	int i;
 
