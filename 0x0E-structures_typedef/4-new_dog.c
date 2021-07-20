@@ -12,29 +12,16 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *billy;
+	dog_t d_dog, *billy;
 
 	billy = malloc(sizeof(dog_t));
 	if (billy == NULL)
 		return (NULL);
-	billy->name = name;
-	billy->age = age;
-	billy->owner = owner;
+	d_dog.name = name;
+	d_dog.age = age;
+	d_dog.owner = owner;
+
+	billy = &d_dog;
 
 	return (billy);
-}
-
-/**
- * main - storing a copy of name and owner
- *
- * Return: nothing
- */
-int main(void)
-{
-	dog_t *billy;
-
-	billy = new_dog("Billy", 10, "Paul");
-	if (billy == NULL)
-		return (1);
-	return (0);
 }
