@@ -38,4 +38,5 @@ char *cap_string(char *);
 char *_strncat(char *dest, char *src, int n);
 char *leet(char *);
 int largest_number(int a, int b, int c);
-int convert_day(int month, int day)
+int convert_day(int month, int day);
+void print_remaining_days(int month, int day, int year);
