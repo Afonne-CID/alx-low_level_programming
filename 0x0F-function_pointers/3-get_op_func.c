@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 /**
- * get_op_func - selects the correction function to perform the operation asked by the user.
+ * get_op_func - selects the correction function to perform the operation aske\
+ * d by the user.
  * @s: operator passed as argument to the program
  *
  * Return: the right function to operator
