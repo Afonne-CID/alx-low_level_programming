@@ -1,6 +1,8 @@
 #ifndef LISTS_H
 #define LISTS_H
 
+int _putchar(char c);
+
 /**
  * list - a structure for our single-linked list
  * @str: 1 member of string type
