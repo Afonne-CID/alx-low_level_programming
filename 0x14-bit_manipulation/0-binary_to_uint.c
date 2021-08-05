@@ -20,14 +20,14 @@ unsigned int binary_to_uint(const char *b)
 		length++;
 
 	length -= 1;
-	
+
 	for (; length >= 0; length--)
 	{
 		if (b[length] != '0' && b[length] != '1')
 			return (0);
 
 		num += (b[length] - '0') * converted_int;
-		converted_int *= 2; 
+		converted_int *= 2;
 	}
 
 	return (num);
