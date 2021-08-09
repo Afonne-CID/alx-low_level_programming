@@ -4,6 +4,8 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdio.h>
+#include "main.h"
+#include "holberton.h"
 
 /**
  * read_textfile - Function reads a text file and prints
@@ -15,7 +17,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t fd, printer;
+	ssize_t fd, reader, printer;
 	char *buffer;
 
 	if (filename == NULL)
@@ -29,12 +31,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (buffer == NULL)
 		return (0);
 
-	fd = read(fd, buffer, letters);
-	if (fd == -1)
+	reader = read(fd, buffer, letters);
+	if (reader == -1)
 	{
 		free(buffer);
 		return (0);
 	}
+
+	buffer[letters + 1] = '\0';
 
 	printer = write(STDOUT_FILENO, buffer, letters);
 	if (printer == -1)
