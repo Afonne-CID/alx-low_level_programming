@@ -1,0 +1,5 @@
+main.c
+*.swp
+*__
+*auto
+a.out
