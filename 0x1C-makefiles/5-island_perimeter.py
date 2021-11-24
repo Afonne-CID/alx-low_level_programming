@@ -20,11 +20,22 @@ def island_perimeter(grid):
         raise TypeError("grid should be a list of lists of int")
 
     cnt = 0
-    for my_list in grid:
-        for cell in my_list:
-            if not isinstance(cell, int):
+    breadth = 0
+    tmp = 0
+    for length in range(len(grid)):
+        for w in range(len(grid[0])):
+            if not isinstance(grid[length][w], int):
                 raise TypeError("elements of grid should be integers")
             else:
-                if cell > 0:
+                if grid[length][w] == 1:
                     cnt += 1
-    return "{}".format(2 * (1 + cnt))
+                if (w > 0 and grid[length][w] == 1):
+                    if ((grid[length][w - 1] == 1)
+                            and (grid[length + 1][w] == 1)
+                            or (grid[length + 1][w - 1] == 1)):
+                        tmp = length
+                    if length == tmp:
+                        breadth += 1
+    if (cnt > 0 and breadth == 0):
+        breadth = 1
+    return "{}".format(2 * (breadth + cnt))
