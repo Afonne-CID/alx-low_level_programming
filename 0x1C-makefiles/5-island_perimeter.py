@@ -38,4 +38,4 @@ def island_perimeter(grid):
                         breadth += 1
     if (cnt > 0 and breadth == 0):
         breadth = 1
-    return "{}".format(2 * (breadth + cnt))
+    return 2 * (breadth + cnt)
