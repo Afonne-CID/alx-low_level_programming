@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -12,7 +11,6 @@
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *tmp;
-	unsigned int cnt = 0;
 
 	if (*head == NULL)
 		return (-1);
@@ -27,9 +25,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (1);
 	}
 
-	while (cnt != index)
+	for (; index != 0; index--)
 	{
-		cnt++;
 		if (!tmp)
 			return (-1);
 		tmp = tmp->next;
