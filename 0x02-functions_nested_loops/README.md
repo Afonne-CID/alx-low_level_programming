@@ -1,1 +1,1 @@
-This is another lesdon on C. We will be dealing with fuctions, theire declaration, definition and header (.h) files.
+This is another lesson on C. We will be dealing with functions, their declaration, definition and header (.h) files.
